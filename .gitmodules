@@ -1,0 +1,24 @@
+[submodule "arch/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/ale"]
+	path = arch/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/ale
+	url = git@github.com:dense-analysis/ale.git
+[submodule "arch/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/vim-airline"]
+	path = arch/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/vim-airline
+	url = git@github.com:vim-airline/vim-airline.git
+[submodule "arch/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/vim-airline-themes"]
+	path = arch/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/vim-airline-themes
+	url = git@github.com:vim-airline/vim-airline-themes.git
+[submodule "arch/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/vim-fugitive"]
+	path = arch/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule "arch/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/vim-prettier"]
+	path = arch/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/vim-prettier
+	url = git@github.com:prettier/vim-prettier.git
+[submodule "arch/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/vim-js"]
+	path = arch/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/vim-js
+	url = git@github.com:yuezk/vim-js.git
+[submodule "arch/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/vim-jsx-pretty"]
+	path = arch/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/vim-jsx-pretty
+	url = git@github.com:MaxMEllon/vim-jsx-pretty.git
+[submodule "arch/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/yats.vim"]
+	path = arch/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/yats.vim
+	url = git@github.com:HerringtonDarkholme/yats.vim
