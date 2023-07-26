@@ -22,3 +22,6 @@
 [submodule "arch/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/yats.vim"]
 	path = arch/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/yats.vim
 	url = git@github.com:HerringtonDarkholme/yats.vim
+[submodule "arch/dotfiles/tmux/.config/tmux/plugins/tmux-resurrect"]
+	path = arch/dotfiles/tmux/.config/tmux/plugins/tmux-resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect

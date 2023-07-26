@@ -9,7 +9,7 @@ Each folder in the parent folder represents a different OS, simply run the autoc
 
 As this repo uses submodules make sure to clone with the `--recursive` flag
 
-`sudo git clone --recursive https://github.com/PascalCompiles/.autoconfig.git`
+`git clone --recursive git@github.com:PascalCompiles/.autoconfig.git`
 
 ## Run the autoconfig script
 
