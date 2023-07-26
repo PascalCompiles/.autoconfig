@@ -1,0 +1,27 @@
+# Hardware details can be captured by executing: sudo cat /proc/bus/input/devices
+# Mappings should be in the following format: KEYBOARD_KEY_<scancode>=<keycode>
+# <scancode> details can captured by executing: sudo evtest
+# Format for the device is as follows: evdev:input:b<BusID>v<Vendor>p<Product>e<Version>
+# Note: BusID for USB devices should be 0003 and any letters should be provided in uppercase.
+
+evdev:input:b0003v*p* # most keyboards plugged via USB. 
+ KEYBOARD_KEY_70039=esc # CapsLock to Esc.
+
+# For newer Thinkpads
+evdev:input:b0011v*p*
+ KEYBOARD_KEY_3a=esc # CapsLock to Esc.
+ KEYBOARD_KEY_b8=leftalt
+
+#evdev:input:b0003v05ACp024C* # Internal Macbook Air Keyboard
+# Switch alt and meta keys as per typical layout.
+# KEYBOARD_KEY_700e3=leftalt 
+# KEYBOARD_KEY_700e2=leftmeta
+# KEYBOARD_KEY_700e7=rightalt
+# KEYBOARD_KEY_700e6a=rightmeta
+
+
+evdev:input:b0003v04D9p0141*  # 60% Keyboard (Pok3r)
+ KEYBOARD_KEY_70029=grave
+
+evdev:input:b0003v0C45p7638*  # 65% Keyboard (Oceanstar)
+ KEYBOARD_KEY_70029=grave

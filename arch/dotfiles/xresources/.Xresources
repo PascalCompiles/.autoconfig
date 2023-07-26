@@ -1,0 +1,77 @@
+URxvt.scrollBar:        false
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+!!URxvt.font : xft:Source Code Pro:size=9:antialias=true:hinting=true
+URxvt*font: xft:FiraCode Nerd Font:style=Regular:size=9:antialias=true:hinting=true
+URxvt.boldFont: xft:FiraCode Nerd Font:style=Bold:size=9:antialias=true:hinting=true
+URxvt.clipboard.autocopy: true
+URxvt.perl-ext-common: default,clipboard
+
+
+#define S_base03        #373B41
+#define black           #111111
+#define green           #578999
+!!  #define S_base00        #657b83
+#define S_base00        #ffffff
+!! #839496
+#define S_base0         #ffffff
+
+!! #define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+*background:            S_base03
+*foreground:            S_base0
+*fadeColor:             S_base03
+*cursorColor:           #93a1a1
+!! *pointerColorBackground: #ffffff
+!! *pointerColorForeground: #ffffff
+
+#define yellow          #fbe02d
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define Bright_green    #5af78e
+
+!! black dark/light
+*color0:                black
+*color8:                S_base03
+
+!! red dark/light
+*color1:                S_red
+*color9:                S_orange
+
+!! greens
+*color2:                Bright_green 
+*color10:               S_base01
+
+!! yellow dark/light
+*color3:                yellow
+*color11:               S_base00
+
+!! blue dark/light
+*color4:                S_blue
+*color12:               S_base0
+
+!! magenta dark/light
+*color5:                S_magenta
+*color13:               S_violet
+
+!! cyan dark/light
+*color6:                S_cyan
+*color14:               #ffffff 
+
+!! white dark/light
+*color7:                S_base2
+*color15:               S_base3
+
+!!Add transparency 
+urxvt.depth: 32
+urxvt.background: rgba:1111/1111/1111/dddd
+urxvt*dynamicColors: on
+!!urxvt.fading:10
+
+
