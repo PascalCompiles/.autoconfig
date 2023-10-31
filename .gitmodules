@@ -37,3 +37,6 @@
 [submodule "ubuntu/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/vim-fugitive"]
 	path = ubuntu/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
+[submodule "ubuntu/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/ale"]
+	path = ubuntu/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/ale
+	url = git@github.com:dense-analysis/ale.git
