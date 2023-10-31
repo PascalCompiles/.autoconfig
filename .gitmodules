@@ -28,3 +28,6 @@
 [submodule "ubuntu/dotfiles/tmux/.config/tmux/plugins/tmux-resurrect"]
 	path = ubuntu/dotfiles/tmux/.config/tmux/plugins/tmux-resurrect
 	url = git@github.com:tmux-plugins/tmux-resurrect.git
+[submodule "ubuntu/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/vim-airline"]
+	path = ubuntu/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/vim-airline
+	url = git@github.com:vim-airline/vim-airline.git
