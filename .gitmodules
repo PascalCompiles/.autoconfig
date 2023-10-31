@@ -25,3 +25,6 @@
 [submodule "arch/dotfiles/tmux/.config/tmux/plugins/tmux-resurrect"]
 	path = arch/dotfiles/tmux/.config/tmux/plugins/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect
+[submodule "ubuntu/dotfiles/tmux/.config/tmux/plugins/tmux-resurrect"]
+	path = ubuntu/dotfiles/tmux/.config/tmux/plugins/tmux-resurrect
+	url = git@github.com:tmux-plugins/tmux-resurrect.git
