@@ -2,8 +2,6 @@
 # Exports #
 ###########
 
-# oh-my-zsh location
-export ZSH=/usr/share/oh-my-zsh
 
 # use bat to preview
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always {}'"
@@ -24,16 +22,16 @@ export SAM_CLI_TELEMETRY=0
 # composer vendor bin directory 
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 
+# Add cargo apps
+export PATH=$PATH:$HOME/.cargo/bin
+
 # go bin folder
 export PATH="$PATH:$HOME/go/bin"
 
-# n version manager
-export N_PREFIX="$HOME/.n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
-
-export AWS_PROFILE=default              
 
 # enable pass extensions
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
+
 
 # testing gpg
 #GPG_TTY=$(tty)
@@ -85,9 +83,9 @@ alias open="setsid -f xdg-open"
 # Sourcing #
 ############
 
-source $ZSH/oh-my-zsh.sh
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+source $HOME/.oh-my-zsh/oh-my-zsh.sh
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
 
 # source chruby and set the latest version of ruby installed via ruby-install.
 #source /usr/share/chruby/chruby.sh
@@ -107,3 +105,6 @@ if [[ ! $(ps -e | grep tmux) ]] && [[ "$TMUX" = "" ]]; then tmux new -s main; el
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+
+export N_PREFIX="$HOME/.n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+export PATH="/home/pascal/.local/bin:$PATH"
