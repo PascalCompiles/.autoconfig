@@ -9,7 +9,8 @@ set noshowmode
 set hls is
 set ignorecase
 set autoindent
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
+set paste
 set backspace=indent,eol,start
 set autoread
 set visualbell
@@ -47,10 +48,6 @@ hi! Type ctermfg=177
 hi Constant ctermfg=198
 set list
 set listchars=tab:\┆\ "
-
-"-----Environment Specific Settings-----
-"set clipboard=unnamed
-"set clipboard=unnamedplus
 
 "-----Productivity Enhancing Snippets-----
 set rulerformat=%15(%c%V\ %p%%%)

@@ -77,6 +77,7 @@ yay -S vscodium-bin
 yay -S ungoogled-chromium-bin
 yay -S vlc-plugin-fluidsynth-bin
 yay -S oh-my-zsh-git
+yay -S nodejs-n
 
 
 sudo rsync -aW ./etc/ /etc

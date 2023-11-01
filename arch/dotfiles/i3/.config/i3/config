@@ -59,7 +59,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+dblquote split h
+#bindsym $mod+dblquote split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -163,7 +163,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 
 bar {
-        i3bar_command i3bar -t
+       # i3bar_command i3bar -t
         colors {
         background #00000095
         }
@@ -207,4 +207,15 @@ bindsym XF86KbdBrightnessDown exec --no-startup-id cat /sys/class/leds/smc::kbd_
 #exec --no-startup-id sleep 0.9 && /usr/local/bin/monitor-hotplug.sh 
 #exec_always --no-startup-id /usr/local/bin/monitor-hotplug.sh 
 #exec_always --no-startup-id  ~/.screenlayout/monitor-defaults.sh
-exec_always --no-startup-id ~/.fehbg
+#exec_always --no-startup-id ~/.fehbg
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY
+exec_always --no-startup-id swaymsg output eDP-1 scale 1.2
+exec_always --no-startup-id swaymsg output '*' bg $HOME/.wallpapers/roshi-house.jpg fill
+
+
+input type:touchpad {
+       dwt enabled
+       tap enabled
+       natural_scroll enabled 
+       middle_emulation enabled
+}
