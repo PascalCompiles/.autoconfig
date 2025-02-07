@@ -14,6 +14,7 @@ sudo apt install -y curl
 sudo apt install -y cargo
 sudo apt install -y newsboat 
 sudo apt install -y docker.io
+sudo apt-get install -y xdg-desktop-portal-gtk
 
 wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
     | gpg --dearmor \

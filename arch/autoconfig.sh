@@ -53,7 +53,6 @@ pacman -S pandoc
 pacman -S pass
 pacman -S pavucontrol
 pacman -S php
-pacman -S picom
 pacman -S pinentry
 pacman -S pipewire
 pacman -S pipewire-alsa

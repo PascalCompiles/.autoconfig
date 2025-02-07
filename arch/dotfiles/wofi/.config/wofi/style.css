@@ -1,0 +1,40 @@
+
+
+
+window {
+    background-color: rgba(192,192,192,0.6);
+}
+
+
+expander > list > #entry {
+    background-color: rgba(192,192,192,0.7); 
+}
+
+*:focus {
+    outline: none;
+    border:none;
+}
+
+#input {
+    color: white;
+    border: none;
+    background-color: rgba(192,192,192,0.1);
+    font-size: 18px;
+}
+
+#input:focus {
+outline-width:0;
+border:none;
+}
+
+
+#text {
+    color:white;
+}
+
+
+
+#entry:selected {
+    background-color: rgba(192,192,192,0.8);
+}
+

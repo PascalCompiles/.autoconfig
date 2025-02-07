@@ -2,6 +2,8 @@
 # Exports #
 ###########
 
+cat $HOME/todo.txt
+
 # oh-my-zsh location
 export ZSH=/usr/share/oh-my-zsh
 
@@ -27,6 +29,9 @@ export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 # go bin folder
 export PATH="$PATH:$HOME/go/bin"
 
+# rust folder
+export PATH="$PATH:$HOME/.cargo/bin"
+
 # n version manager
 export N_PREFIX="$HOME/.n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 
@@ -34,6 +39,8 @@ export AWS_PROFILE=default
 
 # enable pass extensions
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
+
+
 
 # testing gpg
 #GPG_TTY=$(tty)
@@ -107,3 +114,22 @@ if [[ ! $(ps -e | grep tmux) ]] && [[ "$TMUX" = "" ]]; then tmux new -s main; el
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+
+
+## Sway socket
+#export SWAYSOCK=$( lsof /run/user/$(id -u)/sway-ipc.* 2>/dev/null | awk '{print $9}' | tail -n +2 | sort | uniq )
+
+export SWAYSOCK=$XDG_RUNTIME_DIR/sway-ipc.$UID.$(pgrep -x sway).sock
+
+# Created by `pipx` on 2024-10-27 06:38:23
+export PATH="$PATH:/home/pascal/.local/bin"
+
+export LC_ALL="en_US.UTF-8"
+
+#if [[ -v TMUX ]]; then
+#    # inside tmux, we don't know if Sway got restarted
+#    swaymsg(){
+#        export SWAYSOCK=$XDG_RUNTIME_DIR/sway-ipc.$UID.$(pgrep -x sway).sock
+#        command swaymsg "$@"
+#    }
+#fi
