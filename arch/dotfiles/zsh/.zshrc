@@ -119,7 +119,7 @@ if [[ ! $(ps -e | grep tmux) ]] && [[ "$TMUX" = "" ]]; then tmux new -s main; el
 ## Sway socket
 #export SWAYSOCK=$( lsof /run/user/$(id -u)/sway-ipc.* 2>/dev/null | awk '{print $9}' | tail -n +2 | sort | uniq )
 
-export SWAYSOCK=$XDG_RUNTIME_DIR/sway-ipc.$UID.$(pgrep -x sway).sock
+#export SWAYSOCK=$XDG_RUNTIME_DIR/sway-ipc.$UID.$(pgrep -x sway).sock
 
 # Created by `pipx` on 2024-10-27 06:38:23
 export PATH="$PATH:/home/pascal/.local/bin"

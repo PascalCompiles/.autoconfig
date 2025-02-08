@@ -188,6 +188,8 @@ bar {
 # Disable Window title bars 
 for_window [class="^.*"] border pixel 0
 
+for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 0 0
+
 # Gaps
 gaps inner 10
 
@@ -234,7 +236,8 @@ input type:touchpad {
 }
 
 
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_CURRENT_SESSION
+exec systemctl --user dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec systemctl --user start user-graphical-session.target
-exec kanshi
+exec_always kanshi
 exec systemctl --user start gammastep.service 
