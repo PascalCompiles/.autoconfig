@@ -66,6 +66,7 @@ pacman -S rofi-dmenu
 pacman -S vlc
 pacman -S youtube-dl
 pacman -S zathura
+pacman -S slurp
 
 # make sure acpid is enabled as a service on systems that need it
 #systemctl enable acpid.service 

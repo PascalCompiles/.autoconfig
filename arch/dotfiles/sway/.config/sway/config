@@ -195,27 +195,27 @@ gaps inner 10
 
 
 # Load nm-applet for the i3 bar
-exec --no-startup-id nm-applet
+exec nm-applet
 
 
 # Monitor Backlight 
-bindsym XF86MonBrightnessUp exec --no-startup-id ybacklight -inc 4 # Increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id ybacklight -dec 4 # Decrease screen brightness
+bindsym XF86MonBrightnessUp exec ybacklight -inc 4 # Increase screen brightness
+bindsym XF86MonBrightnessDown exec ybacklight -dec 4 # Decrease screen brightness
 
 # Keyboard Backlight
-bindsym XF86KbdBrightnessUp exec --no-startup-id cat /sys/class/leds/smc::kbd_backlight/brightness | awk '{print$1"+10"}'| bc > /sys/class/leds/smc::kbd_backlight/brightness
-bindsym XF86KbdBrightnessDown exec --no-startup-id cat /sys/class/leds/smc::kbd_backlight/brightness | awk '{print$1"-10"}'| bc > /sys/class/leds/smc::kbd_backlight/brightness
+bindsym XF86KbdBrightnessUp exec cat /sys/class/leds/smc::kbd_backlight/brightness | awk '{print$1"+10"}'| bc > /sys/class/leds/smc::kbd_backlight/brightness
+bindsym XF86KbdBrightnessDown exec cat /sys/class/leds/smc::kbd_backlight/brightness | awk '{print$1"-10"}'| bc > /sys/class/leds/smc::kbd_backlight/brightness
 
 # Keyboard sound
-bindsym XF86AudioMute        exec --no-startup-id "amixer -q set Master toggle"
-bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -q set Master 5%+ unmute"
-bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -q set Master 5%- unmute"
+bindsym XF86AudioMute        exec "amixer -q set Master toggle"
+bindsym XF86AudioRaiseVolume exec "amixer -q set Master 5%+ unmute"
+bindsym XF86AudioLowerVolume exec "amixer -q set Master 5%- unmute"
 
 # Use flameshot for screenshots
-bindsym Print exec --no-startup-id flameshot gui --path $HOME/Pictures
+bindsym Print exec flameshot gui --path $HOME/Pictures
 
 # Fix clicks
-bindsym --release $mod+n seat - cursor release button1                 
+#bindsym --release $mod+n seat - cursor release button1                 
 
 # Load configurations for plugged in monitors
 #exec --no-startup-id sleep 0.9 && /usr/local/bin/monitor-hotplug.sh 

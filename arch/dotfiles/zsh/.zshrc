@@ -41,7 +41,6 @@ export AWS_PROFILE=default
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 
 
-
 # testing gpg
 #GPG_TTY=$(tty)
 #export GPG_TTY
@@ -87,6 +86,9 @@ alias pacman="sudo pacman"
 
 # open files quickly 
 alias open="setsid -f xdg-open"
+
+# Easy screenshots in Wayland.
+alias screenshot="slurp | grim -g - screenshot-$(echo $(date  --iso-8601=seconds)).png"
 
 ############
 # Sourcing #
