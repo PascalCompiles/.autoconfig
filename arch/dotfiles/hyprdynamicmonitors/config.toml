@@ -1,0 +1,37 @@
+[general]
+destination = "$HOME/.config/hypr/monitors.conf"
+
+[power_events]
+
+[power_events.dbus_query_object]
+path = "/org/freedesktop/UPower/devices/line_power_AC0"
+
+[[power_events.dbus_signal_match_rules]]
+object_path = "/org/freedesktop/UPower/devices/line_power_AC0"
+
+
+[profiles.home]
+config_file = "hyprconfigs/home.conf"
+config_file_type = "static"
+[profiles.home.conditions]
+power_state = "AC"
+
+[[profiles.home.conditions.required_monitors]]
+name = "eDP-1"
+description = "Samsung Display Corp. 0x4180"
+monitor_tag = "monitor0"
+
+[[profiles.home.conditions.required_monitors]]
+name = "DP-7"
+description = "Acer Technologies V276HL T4JAA0028567"
+monitor_tag = "monitor1"
+
+[[profiles.home.conditions.required_monitors]]
+name = "DP-8"
+description = "Acer Technologies V276HL T4JAA0028567"
+monitor_tag = "monitor2"
+
+
+[fallback_profile]
+config_file = "hyprconfigs/fallback.conf"
+config_file_type = "static"

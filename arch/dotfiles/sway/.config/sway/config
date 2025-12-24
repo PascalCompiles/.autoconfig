@@ -1,3 +1,13 @@
+include /etc/sway/config.d/*
+focus_follows_mouse always
+popup_during_fullscreen leave_fullscreen
+for_window [app_id="mako"] floating enable
+# Disable Window title bars 
+for_window [class="^.*"] border pixel 0
+
+for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 0 0
+
+# Gaps
 
 # Set modifier key to Alt
 set $mod Mod1
@@ -28,7 +38,8 @@ bindsym $mod+Shift+q kill
 
 # start rofi
 #bindsym $mod+d exec --no-startup-id rofi -show combi 
-bindsym $mod+d exec wofi --show=drun --allow-images
+#bindsym $mod+d exec wofi --show=drun --allow-images
+bindsym $mod+d exec fuzzel
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -160,8 +171,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Mouse behavior
-mouse_warping none
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -222,7 +231,7 @@ bindsym Print exec flameshot gui --path $HOME/Pictures
 #exec_always --no-startup-id /usr/local/bin/monitor-hotplug.sh 
 #exec_always --no-startup-id  ~/.screenlayout/monitor-defaults.sh
 #exec_always --no-startup-id ~/.fehbg
-
+set $filemanager nautilus 
 output '*' adaptive_sync on
 output '*' bg $HOME/.wallpapers/roshi-house.jpg fill
 output eDP-1 scale 1.3
@@ -235,9 +244,13 @@ input type:touchpad {
        middle_emulation enabled
 }
 
+exec systemctl --user import-environment I3SOCK XCURSOR_SIZE XCURSOR_THEME
 
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_CURRENT_SESSION
-exec systemctl --user dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
-exec systemctl --user start user-graphical-session.target
-exec_always kanshi
+#$exec systemctl --user start user-graphical-session.target
+# comments below likely can be deleted:
+#exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_CURRENT_SESSION
+#exec systemctl --user dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+#exec systemctl --user start user-graphical-session.target
+exec_always mako
+exec_always kanshi reload
 exec systemctl --user start gammastep.service 

@@ -43,6 +43,7 @@ pacman -S ncdu
 pacman -S neofetch
 pacman -S neovim
 pacman -S nerd-fonts-complete
+pacman -S ttf-font-awesome
 pacman -S network-manager-applet
 pacman -S networkmanager
 pacman -S newsboat
@@ -61,12 +62,17 @@ pacman -S pipewire-media-session
 pacman -S pipewire-pulse
 pacman -S redshift
 pacman -S ripgrep
-pacman -S rofi
-pacman -S rofi-dmenu
+pacman -S fuzzel
+#pacman -S rofi
+#pacman -S rofi-dmenu
 pacman -S vlc
 pacman -S youtube-dl
 pacman -S zathura
 pacman -S slurp
+pacman -S pulsemixer
+pacman -S hyprland
+pacman -S waybar
+pacman -S brightnessctl
 
 # make sure acpid is enabled as a service on systems that need it
 #systemctl enable acpid.service 
