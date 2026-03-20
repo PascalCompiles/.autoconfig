@@ -1,0 +1,4 @@
+# Set the default timeout to 5000 milliseconds (5 seconds)
+default-timeout=5000
+# To ignore timeouts set by applications and always use the default-timeout
+ignore-timeout=1
