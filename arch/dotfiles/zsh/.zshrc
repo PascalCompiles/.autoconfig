@@ -4,6 +4,7 @@
 
 cat $HOME/todo.txt
 
+
 # general tools
 export PATH="$PATH:/usr/bin/"
 
