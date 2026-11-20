@@ -43,3 +43,6 @@
 [submodule "ubuntu/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/vim-prettier"]
 	path = ubuntu/dotfiles/nvim/.local/share/nvim/site/pack/legacy/start/vim-prettier
 	url = git@github.com:prettier/vim-prettier.git
+[submodule "arch/dotfiles/tmux/.config/tmux/plugins/tmux-continuum"]
+	path = arch/dotfiles/tmux/.config/tmux/plugins/tmux-continuum
+	url = https://github.com/tmux-plugins/tmux-continuum
