@@ -1,9 +1,8 @@
 profile home {
   output eDP-1 disable
-  exec swaymsg workspace 1, move workspace to DP-7
-  exec swaymsg workspace 2, move workspace to DP-8
-  output DP-7 enable mode 1920x1080@60.000Hz position 0,0
-  output DP-8 enable mode 1920x1080@60.000Hz position 1920,0
+  output "Acer Technologies V276HL T4JAA0028567" enable mode 1920x1080@60.000Hz position 0,0
+  output "Unknown Unknown Unknown" enable mode 1920x1080@60.000Hz position 1920,0
+  exec niri msg action move-workspace-to-monitor-right
 }
 
 profile unplugged {
