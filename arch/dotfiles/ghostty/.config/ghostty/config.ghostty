@@ -4,3 +4,5 @@ background-blur = false
 theme = Catppuccin Mocha
 font-family = Noto Sans Mono
 font-synthetic-style = bold, italic, bold-italic
+gtk-titlebar = false
+window-decoration = none
